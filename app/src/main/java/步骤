@@ -1,0 +1,26 @@
+
+问题1： Activity 如何传递数据到 Fragment？
+    答：采用 Bundle方式。
+    Activity传递数据给Fragment:
+    1.获取FragmentManager
+    2.获取FragmentTransaction
+    3.创建需要添加的Fragment
+    4.创建Bundle对象(存储数据,并传递到Fragment中)
+    5.往bundle中添加数据
+    6.把数据添加到Fragment中
+    7.动态添加fragmnet
+      即将创建的fragment添加到Activity布局文件中定义的占位符中(Frameayout)
+
+
+    Fragment获取Activity传递过来的数据
+    1.通过getArgments()获取从Activity传过来的数据
+    2.获取某一值
+
+问题2：Fragment 如何传递数据到 Activity
+   答：采用 接口回调 方式
+   步骤1：在Activity的布局文件定义1占位符（FrameLayout）
+   步骤2：设置Fragment的布局文件
+   步骤3：设置回调接口
+   该接口用于用于Activity与Fragment通信
+   步骤4：设置Fragment的类文件
+   步骤5：设置Acticvity的类文件
